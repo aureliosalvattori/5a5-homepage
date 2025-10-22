@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>A5A — Produtos</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site">
+
+    <header class="navbar" role="banner">
+      <div class="nav-inner">
+        <div class="brand" aria-hidden="false">
+          <img src="imagens/a5alogo.png" alt="A5A — logo">
+        </div>
+
+        <nav class="primary" role="navigation" aria-label="Main navigation">
+          <a href="#" title="Produtos">Produtos</a>
+          <a class="inactive" href="#">Criadores</a>
+          <a class="inactive" href="#">Comunidade</a>
+          <a class="inactive" href="#">Notícias</a>
+          <a class="inactive" href="#">Sobre</a>
+          <a class="inactive" href="#">Contato</a>
+          <a class="inactive" href="#">Campeonatos</a>
+          <a class="inactive" href="#">Times</a>
+          <a class="inactive" href="#">Jogos</a>
+        </nav>
+
+        <div class="nav-spacer" aria-hidden="true"></div>
+
+        <div class="nav-actions" role="search">
+          <button>Entrar</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero" aria-label="Banner principal">
+      <img class="bg" src="imagens/esportsbanner.jpg" alt="Palco eSports — imagem de fundo">
+      <div class="logo-center" role="img" aria-label="Logo A5A">
+        <img src="imagens/a5alogo.png" alt="Logo A5A">
+      </div>
+    </section>
+
+
+    <section class="games" aria-label="Jogos em destaque">
+      <article class="game-card" role="article" aria-labelledby="g1">
+        <img src="imagens/csgo.png" alt="CS:GO — destaque">
+        <div class="label" id="g1"><strong>CS:GO</strong></div>
+      </article>
+
+      <article class="game-card" role="article" aria-labelledby="g2">
+        <img src="imagens/overwatch.jpg" alt="Overwatch 2 — destaque">
+        <div class="label" id="g2"><strong>Overwatch 2</strong></div>
+      </article>
+    </section>
+
+
+    <section aria-labelledby="members-title">
+      <h3 id="members-title" class="section-title">Membros</h3>
+      <div class="section-sub">e assistentes</div>
+
+      <div class="members-grid">
+        <div class="member">
+          <div class="avatar"><img src="imagens/cintra.png" alt="Arthur Cintra"></div>
+          <div class="info">
+            <div class="role">“Líder e jogador”</div>
+            <div class="name">Arthur Cintra</div>
+          </div>
+        </div>
+
+        <div class="member">
+          <div class="avatar"><img src="imagens/souza.png" alt="Arthur Souza"></div>
+          <div class="info">
+            <div class="role">“Jogador”</div>
+            <div class="name">Arthur Souza</div>
+          </div>
+        </div>
+
+        <div class="member">
+          <div class="avatar"><img src="imagens/aurelio.png" alt="Aurélio José"></div>
+          <div class="info">
+            <div class="role">“Jogador e colíder”</div>
+            <div class="name">Aurélio José</div>
+          </div>
+        </div>
+
+        <div class="member">
+          <div class="avatar"><img src="imagens/bravo.png" alt="Arthur Bravo"></div>
+          <div class="info">
+            <div class="role">“Jogador”</div>
+            <div class="name">Arthur Bravo</div>
+          </div>
+        </div>
+
+        <div class="member">
+          <div class="avatar"><img src="imagens/jonson.png" alt="Arthur Jonson"></div>
+          <div class="info">
+            <div class="role">“Jogador”</div>
+            <div class="name">Arthur Jonson</div>
+          </div>
+        </div>
+
+        <div class="member">
+          <div class="avatar"><img src="imagens/gustavo.png" alt="Gustavo Oliveira"></div>
+          <div class="info">
+            <div class="role">“Diretor e gerente”</div>
+            <div class="name">Gustavo Oliveira</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="site-footer" role="contentinfo">
+      <div>© <span id="year"></span> A5A — Todos os direitos reservados</div>
+      <div class="socials" aria-label="Redes sociais">
+        <a href="#"><img src="imagens/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="imagens/youtube.png" alt="YouTube"></a>
+        <a href="#"><img src="imagens/x.png" alt="X (Twitter)"></a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
