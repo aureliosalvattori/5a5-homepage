@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>A5A — Produtos</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Fonte Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,6 +18,11 @@
         <div class="brand" aria-hidden="false">
           <img src="imagens/a5alogo.png" alt="A5A — logo">
         </div>
+
+        <!-- Botão de menu responsivo -->
+        <button class="menu-toggle" aria-label="Abrir menu">
+          ☰
+        </button>
 
         <nav class="primary" role="navigation" aria-label="Main navigation">
           <a href="#" title="Produtos">Produtos</a>
@@ -44,7 +51,6 @@
       </div>
     </section>
 
-
     <section class="games" aria-label="Jogos em destaque">
       <article class="game-card" role="article" aria-labelledby="g1">
         <img src="imagens/csgo.png" alt="CS:GO — destaque">
@@ -57,7 +63,6 @@
       </article>
     </section>
 
-
     <section aria-labelledby="members-title">
       <h3 id="members-title" class="section-title">Membros</h3>
       <div class="section-sub">e assistentes</div>
@@ -66,7 +71,7 @@
         <div class="member">
           <div class="avatar"><img src="imagens/cintra.png" alt="Arthur Cintra"></div>
           <div class="info">
-            <div class="role">“Líder e jogador”</div>
+            <div class="role">Líder e jogador</div>
             <div class="name">Arthur Cintra</div>
           </div>
         </div>
@@ -74,7 +79,7 @@
         <div class="member">
           <div class="avatar"><img src="imagens/souza.png" alt="Arthur Souza"></div>
           <div class="info">
-            <div class="role">“Jogador”</div>
+            <div class="role">Jogador</div>
             <div class="name">Arthur Souza</div>
           </div>
         </div>
@@ -82,7 +87,7 @@
         <div class="member">
           <div class="avatar"><img src="imagens/aurelio.png" alt="Aurélio José"></div>
           <div class="info">
-            <div class="role">“Jogador e colíder”</div>
+            <div class="role">Jogador e colíder</div>
             <div class="name">Aurélio José</div>
           </div>
         </div>
@@ -90,7 +95,7 @@
         <div class="member">
           <div class="avatar"><img src="imagens/bravo.png" alt="Arthur Bravo"></div>
           <div class="info">
-            <div class="role">“Jogador”</div>
+            <div class="role">Jogador</div>
             <div class="name">Arthur Bravo</div>
           </div>
         </div>
@@ -98,7 +103,7 @@
         <div class="member">
           <div class="avatar"><img src="imagens/jonson.png" alt="Arthur Jonson"></div>
           <div class="info">
-            <div class="role">“Jogador”</div>
+            <div class="role">Jogador</div>
             <div class="name">Arthur Jonson</div>
           </div>
         </div>
@@ -106,13 +111,12 @@
         <div class="member">
           <div class="avatar"><img src="imagens/gustavo.png" alt="Gustavo Oliveira"></div>
           <div class="info">
-            <div class="role">“Diretor e gerente”</div>
+            <div class="role">Diretor e gerente</div>
             <div class="name">Gustavo Oliveira</div>
           </div>
         </div>
       </div>
     </section>
-
 
     <footer class="site-footer" role="contentinfo">
       <div>© <span id="year"></span> A5A — Todos os direitos reservados</div>
@@ -127,6 +131,14 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // --- Script para abrir/fechar menu no mobile ---
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav.primary');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      toggle.classList.toggle('active');
+    });
   </script>
 </body>
 </html>
