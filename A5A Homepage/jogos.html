@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>A5A — Jogos</title>
+
+  <!-- Fonte Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site">
+
+    <header class="navbar" role="banner">
+      <div class="nav-inner">
+        <div class="brand">
+          <img src="imagens/a5alogo.png" alt="A5A — logo">
+        </div>
+
+        <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+
+        <nav class="primary" role="navigation">
+          <a class="inactive" href="index.html">Voltar</a>
+        </nav>
+
+        <div class="nav-spacer"></div>
+
+      </div>
+    </header>
+
+    <section aria-label="Jogos da A5A">
+      <h3 class="section-title">Jogos</h3>
+      <div class="section-sub">Seleção oficial</div>
+
+      <div class="games">
+        <article class="game-card">
+          <img src="imagens/csgo.jpg" alt="CS:GO">
+          <div class="label"><strong>CS:GO</strong></div>
+        </article>
+
+        <article class="game-card">
+          <img src="imagens/mercy.jpg" alt="Overwatch 2">
+          <div class="label"><strong>Overwatch 2</strong></div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div>© <span id="year"></span> A5A — Todos os direitos reservados</div>
+      <div class="socials">
+        <a href="#"><img src="imagens/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="imagens/youtube.png" alt="YouTube"></a>
+        <a href="#"><img src="imagens/x.png" alt="X"></a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav.primary');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      toggle.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
