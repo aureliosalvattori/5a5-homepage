@@ -4,10 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Login — A5A</title>
+
   <link rel="stylesheet" href="style.css">
+
   <style>
     body {
-      background: #0a0118;
+      background: url("imagens/fundo.png") no-repeat center center/cover;
       color: #fff;
       font-family: Arial, sans-serif;
       display: flex;
@@ -15,35 +17,47 @@
       align-items: center;
       height: 100vh;
       margin: 0;
+      backdrop-filter: brightness(0.5);
     }
 
     .login-container {
-      background: #1a1030;
+      background: rgba(0, 0, 0, 0.55);
       padding: 40px;
       border-radius: 20px;
       width: 350px;
       box-shadow: 0 0 15px rgba(255, 115, 0, 0.3);
+      text-align: center;
+    }
+
+    /* Logo */
+    .login-logo img {
+      width: 120px;
+      margin-bottom: 20px;
     }
 
     .login-container h2 {
-      text-align: center;
       margin-bottom: 20px;
       color: var(--accent-orange);
+      font-weight: 700;
     }
 
     .login-container label {
       font-weight: 600;
+      display: block;
+      text-align: left;
+      margin-top: 10px;
     }
 
     .login-container input {
       width: 100%;
       padding: 12px;
-      margin: 10px 0 20px;
+      margin-top: 8px;
       border-radius: 8px;
       border: none;
       outline: none;
       background: #2a1848;
       color: #fff;
+      margin-bottom: 18px;
     }
 
     .login-container button {
@@ -64,7 +78,6 @@
     }
 
     .alt {
-      text-align: center;
       margin-top: 20px;
       font-size: 14px;
     }
@@ -77,7 +90,14 @@
   </style>
 </head>
 <body>
+
   <div class="login-container">
+
+    <!-- Logo adicionada -->
+    <div class="login-logo">
+      <img src="imagens/a5alogo.png" alt="Logo A5A">
+    </div>
+
     <h2>Entrar</h2>
 
     <form>
@@ -93,6 +113,8 @@
     <div class="alt">
       Não tem conta? <a href="#">Cadastre-se</a>
     </div>
+
   </div>
+
 </body>
 </html>
